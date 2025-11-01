@@ -71,8 +71,8 @@ api_test.py
 simple_test.py
 verify_improvements.py
 test_api_connection.py
-fix_git_tracking.py
-check_git_status.py
+# Note: check_git_status.py and fix_git_tracking.py are utility scripts
+# and should be committed (they help verify git security)
 
 # API Keys and Secrets
 **/secrets/
