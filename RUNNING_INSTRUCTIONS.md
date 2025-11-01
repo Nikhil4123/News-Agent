@@ -1,14 +1,44 @@
 # Running the Indian News Fetcher
 
-## Files Created
+## 🆕 NEW: Automated Email Scheduler
 
-1. **[news_fetcher.py](file://c:/Users/asus/Music/Temp/News%20Agent/news_fetcher.py)** - Main script to fetch Indian news and create YouTube content
-2. **[better_news_fetcher.py](file://c:/Users/asus/Music/Temp/News%20Agent/better_news_fetcher.py)** - Improved version that tries multiple sources for better titles
-3. **[requirements.txt](file://c:/Users/asus/Music/Temp/News%20Agent/requirements.txt)** - Python dependencies
-4. **[config.txt](file://c:/Users/asus/Music/Temp/News%20Agent/config.txt)** - API key configuration
-5. **[youtube_news_content.txt](file://c:/Users/asus/Music/Temp/News%20Agent/youtube_news_content.txt)** - Current news content for YouTube
-6. **[news_dashboard.html](file://c:/Users/asus/Music/Temp/News%20Agent/news_dashboard.html)** - Web dashboard to view news
-7. **Test scripts** - Various test files to verify functionality
+**The project now includes automated email delivery!** Get Indian news delivered to your inbox 3 times daily.
+
+### Quick Start (Email Mode)
+1. Configure `config.txt` with your API keys and email settings
+2. Run: `python test_setup.py` to verify configuration
+3. Run: `python scheduler_app.py --test` for immediate test
+4. Run: `python scheduler_app.py` for continuous operation
+
+See [QUICKSTART.md](QUICKSTART.md) for detailed setup instructions.
+
+---
+
+## Files Overview
+
+### **Core Application Files (NEW)**
+1. **scheduler_app.py** - Main scheduler for automated email delivery
+2. **news_service.py** - Unified news service with dual API support
+3. **newsdata_fetcher.py** - NewsData.io API integration
+4. **email_sender.py** - Email notification system
+5. **test_setup.py** - Setup verification script
+
+### **Legacy/Manual Files**
+6. **news_fetcher.py** - Original manual news fetcher
+7. **better_news_fetcher.py** - Enhanced manual fetcher
+8. **simple_news_fetcher.py** - Simplified version
+
+### **Configuration & Data**
+9. **config.txt** - Main configuration file
+10. **requirements.txt** - Python dependencies
+11. **youtube_news_content.txt** - Generated news content
+12. **news_dashboard.html** - Web dashboard
+
+### **Documentation**
+13. **README.md** - Complete documentation
+14. **QUICKSTART.md** - 5-minute setup guide
+15. **DEPLOYMENT_GUIDE.md** - Cloud deployment guide
+16. **PROJECT_OVERVIEW.md** - Project structure
 
 ## Setup Instructions
 
@@ -26,7 +56,40 @@
 
 ## Running the Scripts
 
-### Main News Fetcher
+### Option 1: Automated Email Scheduler (NEW - Recommended)
+
+**For continuous automated delivery via email:**
+
+```bash
+# 1. First, verify your setup
+python test_setup.py
+
+# 2. Test immediately (sends one email now)
+python scheduler_app.py --test
+
+# 3. Run continuously (sends at scheduled times)
+python scheduler_app.py
+```
+
+**What it does:**
+- Fetches news from NewsAPI.org or NewsData.io (with auto-fallback)
+- Sends beautiful HTML emails to configured recipients
+- Runs 3 times daily at scheduled times (default: 6 AM, 2 PM, 10 PM)
+- Logs all activity to `news_scheduler.log`
+- Perfect for deployment on cloud servers
+
+**Configuration**: Edit `config.txt` with your:
+- API keys (NewsAPI.org and/or NewsData.io)
+- Email SMTP settings
+- Recipient email addresses
+- Schedule times
+
+---
+
+### Option 2: Manual News Fetcher (Original)
+
+**For on-demand viewing in console/browser:**
+
 ```bash
 python news_fetcher.py
 ```
@@ -36,7 +99,10 @@ This will:
 - Create [youtube_news_content.txt](file://c:/Users/asus/Music/Temp/News%20Agent/youtube_news_content.txt) with news for YouTube videos
 - Generate [news_dashboard.html](file://c:/Users/asus/Music/Temp/News%20Agent/news_dashboard.html) for web viewing
 
-### Better News Fetcher (Recommended)
+---
+
+### Option 3: Better News Fetcher (Enhanced Manual)
+
 ```bash
 python better_news_fetcher.py
 ```
@@ -45,6 +111,24 @@ This improved version:
 - Tries multiple Indian news sources for better quality titles
 - Filters out generic "Google News" articles
 - Creates [better_youtube_news_content.txt](file://c:/Users/asus/Music/Temp/News%20Agent/better_youtube_news_content.txt)
+
+---
+
+### Option 4: Test Individual Components
+
+```bash
+# Test NewsData.io API
+python newsdata_fetcher.py
+
+# Test email sending
+python email_sender.py
+
+# Test unified news service
+python news_service.py
+
+# Test complete setup
+python test_setup.py
+```
 
 ## Output Files
 

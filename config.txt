@@ -1,1 +1,19 @@
+# API Configuration
 NEWS_API_KEY=71777e8c885643adaada0f2a3288fe9f
+NEWSDATA_API_KEY=pub_4df1799350014b899e79e9d7c3e8f890
+
+# API Preference: newsapi or newsdata (primary source)
+API_PREFERENCE=newsapi
+
+# Email Configuration (for sending news updates)
+# For Gmail: smtp.gmail.com, port 587
+# For Outlook: smtp-mail.outlook.com, port 587
+SMTP_SERVER=smtp.gmail.com
+SMTP_PORT=587
+SENDER_EMAIL=joyboy612w@gmail.com
+SENDER_PASSWORD=yhxq pffk sfmf elxu
+RECIPIENT_EMAILS=joyboy612w@gmail.com,nikhilsarak612w@gmail.com,kalyanisarak@gmail.com,ranjitmane5050@gmail.com
+
+# Schedule Configuration (times in 24-hour format)
+# Default: 6:00, 14:00, 22:00 (3 times a day, 8 hours apart)
+SCHEDULE_TIMES=06:02,14:00,22:00

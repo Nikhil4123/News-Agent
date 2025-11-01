@@ -1,0 +1,37 @@
+# API Configuration
+# Get free API keys from:
+# NewsAPI.org: https://newsapi.org/register
+# NewsData.io: https://newsdata.io/register
+
+NEWS_API_KEY=your_newsapi_org_key_here
+NEWSDATA_API_KEY=your_newsdata_io_api_key_here
+
+# API Preference: newsapi or newsdata (primary source)
+# System will automatically fallback if primary fails
+API_PREFERENCE=newsapi
+
+# Email Configuration (for sending news updates)
+# For Gmail: smtp.gmail.com, port 587
+# For Outlook: smtp-mail.outlook.com, port 587
+# Note: Gmail requires App Password (not regular password)
+
+SMTP_SERVER=smtp.gmail.com
+SMTP_PORT=587
+SENDER_EMAIL=your_email@gmail.com
+SENDER_PASSWORD=your_app_password_here
+RECIPIENT_EMAILS=recipient1@example.com,recipient2@example.com
+
+# Schedule Configuration (times in 24-hour format, comma-separated)
+# Default: 06:00,14:00,22:00 (3 times a day, 8 hours apart)
+# Examples:
+# - 2 times daily: 08:00,20:00
+# - Every 6 hours: 00:00,06:00,12:00,18:00
+# - Business hours: 09:00,18:00
+
+SCHEDULE_TIMES=06:00,14:00,22:00
+
+# Setup Instructions:
+# 1. Copy this file to config.txt in the same directory
+# 2. Fill in your API keys and email credentials
+# 3. Never commit config.txt to git (it's in .gitignore)
+

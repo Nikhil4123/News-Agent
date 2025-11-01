@@ -1,0 +1,105 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Configuration (NEVER COMMIT REAL CREDENTIALS)
+config/config.txt
+config.txt
+config/.env
+*.env
+.env.local
+*.local
+
+# Logs
+logs/
+*.log
+news_scheduler.log
+
+# Generated files
+*.html
+youtube_news_content.txt
+better_youtube_news_content.txt
+news_dashboard.html
+test_results.txt
+
+# Plan/planning files (may contain sensitive info)
+plan.md
+*.plan
+*.backup
+
+# Old root-level files (duplicates - use src/ versions)
+news_fetcher.py
+newsdata_fetcher.py
+email_sender.py
+news_service.py
+simple_news_fetcher.py
+better_news_fetcher.py
+debug_news_fetcher.py
+api_test.py
+simple_test.py
+verify_improvements.py
+test_api_connection.py
+fix_git_tracking.py
+check_git_status.py
+
+# API Keys and Secrets
+**/secrets/
+**/credentials/
+config/local/
+*.key
+*.pem
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+.cache/
+
+# Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# MyPy
+.mypy_cache/
+

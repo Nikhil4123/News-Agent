@@ -150,6 +150,12 @@ def generate_html_dashboard(articles):
             if not url or not url.startswith('http'):
                 url = '#'
             
+            # Escape strings for JavaScript (must be done outside f-string)
+            url_escaped = url.replace("'", "\\'")
+            title_escaped = title.replace("'", "\\'")
+            source_escaped = source.replace("'", "\\'")
+            description_escaped = description.replace("'", "\\'")
+            
             # Add article to HTML
             articles_html += f'''
             <div class="article">
@@ -159,9 +165,9 @@ def generate_html_dashboard(articles):
                 <div class="url-container">
                     <span class="url-label">Link:</span>
                     <a href="{url}" target="_blank" class="url-link">{url}</a>
-                    <button class="copy-btn" onclick="copyToClipboard('{url.replace("'", "\\'")}', this)">Copy Link</button>
+                    <button class="copy-btn" onclick="copyToClipboard('{url_escaped}', this)">Copy Link</button>
                 </div>
-                <button class="copy-content-btn" onclick="copyArticleContent({i}, '{title.replace("'", "\\'")}', '{source.replace("'", "\\'")}', '{published_at}', '{description.replace("'", "\\'")}')">Copy Article Content</button>
+                <button class="copy-content-btn" onclick="copyArticleContent({i}, '{title_escaped}', '{source_escaped}', '{published_at}', '{description_escaped}')">Copy Article Content</button>
             </div>
             '''
     
