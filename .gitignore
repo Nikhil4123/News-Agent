@@ -42,6 +42,33 @@ config/.env
 .env.local
 *.local
 
+# All credential and secret files
+**/config.txt
+**/secrets.txt
+**/credentials.txt
+**/password.txt
+**/*_secret*
+**/*_key*
+**/*_credential*
+**/*_password*
+**/*_token*
+**/*.secret
+**/*.credential
+**/*.key
+**/*.pem
+**/*.p12
+**/*.pfx
+
+# Security/credential documentation (may contain example credentials)
+*SECURITY*.md
+*BREACH*.md
+*FIX*.md
+*SECRETS*.md
+*URGENT*.md
+QUICK_FIX*.md
+SECURITY*.md
+URGENT*.md
+
 # Logs
 logs/
 *.log
